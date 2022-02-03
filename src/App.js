@@ -25,12 +25,13 @@ function App() {
   }, [rand]);
   
   return (
-    <div className="container-fluid" style={mainStyle}>
+    <div className="container-fluid text-center" style={mainStyle}>
+      <header>Quote Machine</header>
       <div className="quote-box" id="quote-box">
         <div className="quote-box-inner" id="text" style={grayBackground}>
-          <p className="quote">{quote.q}</p>
+          <p className="quote" ><span>&#8220;</span>{quote.q}<span>&#8221;</span></p>
           <p id="author">{quote.a}</p>
-          <a href="https://twitter.com/intent/tweet" target="_blank" id="tweet-quote">twitter Logo here</a>
+          <a href="https://twitter.com/intent/tweet" target="_blank" id="tweet-quote"><i className="fab fa-twitter"></i></a>
           <button id="new-quote" onClick={handleClick}>Get New Quote</button>
         </div>
       </div>
